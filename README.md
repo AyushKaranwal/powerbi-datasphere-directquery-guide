@@ -6,7 +6,7 @@ Power BI does not natively support dynamic input parameter passing to SAP Datasp
 
 Implemented custom parameter binding using HANA placeholder syntax within NativeQuery:
 
-PLACEHOLDER."$$YEAR$$" => 'value'
+PLACEHOLDER."$$MONTH$$" => 'value'
 
 This enables dynamic filtering without modifying the underlying Datasphere view.
 
