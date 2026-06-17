@@ -1,12 +1,12 @@
 ## ❗ Problem Statement
 
-Power BI does not natively support dynamic input parameter passing to SAP Datasphere views using DirectQuery.
+Power BI does not natively support dynamic input parameter passing to SAP Datasphere views using DirectQuery by end user using slicer/filter from Power BI.
 
 ## ✅ Solution
 
 Implemented custom parameter binding using HANA placeholder syntax within NativeQuery:
 
-PLACEHOLDER."$$MONTH$$" => 'value'
+PLACEHOLDER."$$YEAR$$" => 'value'
 
 This enables dynamic filtering without modifying the underlying Datasphere view.
 
@@ -36,7 +36,8 @@ This enables dynamic filtering without modifying the underlying Datasphere view.
 3. Open Advanced Editor
 4. Paste M query from `queries/datasphere_query.pq`
 5. Update parameter value
-6. Run query
+6. Make sure the paramter is connected to a slicer in your report.
+7. Run query
 
 
 ## ⚠️ Challenges & Learnings
