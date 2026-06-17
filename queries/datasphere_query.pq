@@ -9,7 +9,7 @@ let
         ""EMP_NAME"",
         ""EMP_ID""
     FROM ""your_schema"".""your_view""
-    (PLACEHOLDER.""$$YEAR$$"" => '" & Text.From(param_year) & "')
+    (PLACEHOLDER.""$$MONTH$$"" => '" & Text.From(param_month) & "')
     ",
 
     Result = Value.NativeQuery(Source, SqlText, null, [EnableFolding = true])
